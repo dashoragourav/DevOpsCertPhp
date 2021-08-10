@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    tools {
+        maven 'mymaven'
+    }
+
+    stages {
+        stage('clone') {
+            steps {
+                git url: 'https://github.com/dashoragourav/DevOpsCertPhp.git'
+            }
+        }
+    }
+}
